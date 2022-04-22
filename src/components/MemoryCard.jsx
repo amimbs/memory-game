@@ -1,4 +1,5 @@
 import React from "react";
+import './MemoryCard.css';
 
 class MemoryCard extends React.Component {
     render() {

@@ -1,5 +1,5 @@
 import './App.css';
-import './components/MemoryCard.css'
+// import './components/MemoryCard.css'
 import MemoryCard from './components/MemoryCard.jsx'
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
       <header className="App-header">
         <h1>Memory Game</h1>
         <h3 id="subtitle">Match Cards to Win</h3>
+        
           <div className="Board">
             <div>
               <MemoryCard />
