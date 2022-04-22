@@ -4,7 +4,19 @@ class MemoryCard extends React.Component {
     render() {
         return (
         <div className="MemoryCard">
-            <img src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png"></img>
+
+            <div className="MemoryCardInner">
+
+                <div className="MemoryCardBack">
+                    <img src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png"></img>
+                </div>
+
+                <div className="MemoryCardFront">
+                    ▲
+                </div>
+
+            </div>
+
         </div>
         )
     } 
