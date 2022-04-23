@@ -7,19 +7,8 @@ class MemoryCard extends React.Component {
         this.state = { isFlipped: false };
     };
 
-    // clickeHandler = () => {
-    //     alert("card clicked");
-    //     this.setState(prevState => {
-    //         console.log(prevState)
-    //         return {isFlipped: !prevState.isFlipped}
-    //     },
-    //     () => console.log(this.state))
-    // };
-
-    clickeHandler = (props) => {
-        console.log(this.state.isFlipped)
+    clickeHandler = () => {
         this.setState({isFlipped: !this.state.isFlipped})
-        console.log(this.state.isFlipped, "wtf")
     };
 
     render() {
