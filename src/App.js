@@ -1,5 +1,4 @@
 import './App.css';
-// import './components/MemoryCard.css'
 import MemoryCard from './components/MemoryCard.jsx'
 
 function App() {
