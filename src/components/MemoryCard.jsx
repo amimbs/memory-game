@@ -8,17 +8,26 @@ class MemoryCard extends React.Component {
     };
 
     clickeHandler = () => {
-        this.setState({isFlipped: !this.state.isFlipped})
+        this.setState({ isFlipped: !this.state.isFlipped })
     };
 
     render() {
+        let memoryCardInnerClass = "";
+
+        if (this.state.isFlipped) {
+            memoryCardInnerClass = "MemoryCardInner flipped";
+        } else {
+            memoryCardInnerClass = "MemoryCardInner"
+        }
+
         return (
-            <div className="MemoryCard" onClick={this.clickeHandler}>
-                <div className="MemoryCardInner">
+            <div className="MemoryCard" onClick={this.clickeHandler.bind(this)}>
+                <div className={memoryCardInnerClass}>
                     <div className="MemoryCardBack">
                         <img src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png" alt="the thing"></img>
                     </div>
                     <div className="MemoryCardFront">
+                        <br />
                         ▲
                     </div>
                 </div>
