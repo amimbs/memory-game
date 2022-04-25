@@ -12,13 +12,15 @@ class MemoryCard extends React.Component {
     };
 
     render() {
-        let memoryCardInnerClass = "";
+        // let memoryCardInnerClass = "";
 
-        if (this.state.isFlipped) {
-            memoryCardInnerClass = "MemoryCardInner flipped";
-        } else {
-            memoryCardInnerClass = "MemoryCardInner"
-        }
+        // if (this.state.isFlipped) {
+        //     memoryCardInnerClass = "MemoryCardInner flipped";
+        // } else {
+        //     memoryCardInnerClass = "MemoryCardInner"
+        // }
+
+        let memoryCardInnerClass = this.state.isFlipped ? "MemoryCardInner flipped" : "MemoryCardInner"
 
         return (
             <div className="MemoryCard" onClick={this.clickeHandler.bind(this)}>
