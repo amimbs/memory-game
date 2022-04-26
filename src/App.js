@@ -59,6 +59,19 @@ class App extends React.Component {
       newPickedCards = [];
     };
 
+
+    ///////////////////////////////////////////////////////////////////////////////
+    // let not_flipped = newDeck.find((element) => {
+    //   return elemet.isFlipped == false
+    // })
+
+    // if(!not_flipped) {
+    //   //there were none left to flip
+    //   //user win message
+    // }
+    ///////////////////////////////////////////////////////////////////////////////
+    
+
     this.setState({
       deck: newDeck,
       pickedCards: newPickedCards
