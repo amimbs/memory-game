@@ -31,7 +31,7 @@ class MemoryCard extends React.Component {
             <div className="MemoryCard" onClick={this.props.pickCard}>
                 <div className={memoryCardInnerClass}>
                     <div className="MemoryCardBack">
-                        <img src="https://www.digitalcrafts.com/img/digitalcrafts-logo-white-y.png" alt="the thing"></img>
+                        <img src="https://www.svgimages.com/svg-image/s5/human-brain-clipart.svg" alt="the thing"></img>
                     </div>
                     <div className="MemoryCardFront">
                         <br />
@@ -39,8 +39,8 @@ class MemoryCard extends React.Component {
                     </div>
                 </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 export default MemoryCard

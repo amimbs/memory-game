@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MemoryCard from './components/MemoryCard.jsx'
+import MemoryCard from './components/MemoryCard.jsx';
 
 function generateDeck() {
   const symbols = [`∆`, ` ß`, `£`, `§`, `•`, `$`, `+`, `ø`];
@@ -9,9 +9,9 @@ function generateDeck() {
     const card = {
       isFlipped: false,
       symbol: symbols[i % 8]
-    }
+    };
     deck.push(card);
-  }
+  };
   return shuffle(deck);
 };
 
@@ -45,7 +45,7 @@ class App extends React.Component {
     let newDeck = this.state.deck.map((card, index) => {
       if (cardIndex === index) {
         return cardToFlip;
-      }
+      };
       return card;
     });
 
@@ -77,7 +77,7 @@ class App extends React.Component {
       };
       if (card2Index === index) {
         return card2
-      }
+      };
       return card;
     });
     this.setState({ deck: newDeck });
@@ -93,27 +93,28 @@ class App extends React.Component {
         <header className="App-header">
           <h1 id="title">Memory Game</h1>
           <h3 id="subtitle">Match Cards to Win</h3>
+
+
+          <div className="Board">
+            <div>
+              {cardsJSX.slice(0, 4)}
+            </div>
+
+            <div>
+              {cardsJSX.slice(4, 8)}
+            </div>
+
+            <div>
+              {cardsJSX.slice(8, 12)}
+            </div>
+            <div>
+              {cardsJSX.slice(12, 16)}
+            </div>
+          </div>
         </header>
-
-        <div className="Board">
-          <div>
-            {cardsJSX.slice(0, 4)}
-          </div>
-
-          <div>
-            {cardsJSX.slice(4, 8)}
-          </div>
-
-          <div>
-            {cardsJSX.slice(8, 12)}
-          </div>
-          <div>
-            {cardsJSX.slice(12, 16)}
-          </div>
-        </div>
-
       </div>
     );
-  }
-}
+  };
+};
+
 export default App;
