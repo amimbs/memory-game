@@ -12,7 +12,7 @@ function generateDeck() {
     };
     deck.push(card);
   };
-  return shuffle(deck);
+  return shuffle(shuffle(deck));
 };
 
 let shuffle = (deck) => {
@@ -60,17 +60,18 @@ class App extends React.Component {
     };
 
 
-    ///////////////////////////////////////////////////////////////////////////////
-    // let not_flipped = newDeck.find((element) => {
-    //   return elemet.isFlipped == false
-    // })
+    /////////////////////////////////////////////////////////////////////////////
+    let flipped = newDeck.every((element) => {
+      return element.isFlipped === true
+    });
 
-    // if(!not_flipped) {
-    //   //there were none left to flip
-    //   //user win message
-    // }
+    if(flipped) {
+      //there were none left to flip
+      //user win message
+      alert('NICE JOB! Refresh to play again!')
+    };
     ///////////////////////////////////////////////////////////////////////////////
-    
+
 
     this.setState({
       deck: newDeck,
